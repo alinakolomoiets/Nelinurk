@@ -10,14 +10,14 @@ namespace Nelinurk
 	{
 		int kõrgus;
 		int laius;
-		string ümbermõõt;
+		//string ümber;
+		//Tüüp tüüp;
 
 		public Nelinurk1() { }//пустой конструктор
 		public Nelinurk1(int kõrgus, int laius)
 		{
 			kõrgus = Kõrgus;
 			laius = Laius;
-			ümbermõõt = Ümbermõõt;
 		}
 		public int Kõrgus {
 			set { kõrgus = value; }
@@ -27,20 +27,20 @@ namespace Nelinurk
 			set { laius = value; }
 			get { return laius; }
 		}
-		public int Ümbermõõt { 	
-			set { ümbermõõt = value; }
-			get { return ümbermõõt; }
-		}
 		public double Ümber()
 		{
-			double ümber = 0;
-			ümber = (kõrgus+laius)*2;
+			double ümber=kõrgus * 2 + laius * 2;
 			return ümber ;
 		}
-			public void Info ()
+		public double Pindala()
+		{
+			double pindala = kõrgus * laius; ;
+			return pindala;
+		}
+		public void Info ()
 		{ 
 			Console.WriteLine("Tere");
-			Console.WriteLine("Minu kõrgus on {0} . Minu laius on {1} . Minu ", kõrgus, laius);
+			Console.WriteLine("Minu kõrgus on {0} . Minu laius on {1} . Minu  ümber {2}", kõrgus, laius, pindala);
 		}
 	}
 }

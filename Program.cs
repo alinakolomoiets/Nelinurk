@@ -16,6 +16,7 @@ namespace Nelinurk
 			kõr.Kõrgus = int.Parse(Console.ReadLine());
 			Console.WriteLine("Laius:");
 			kõr.Laius = int.Parse(Console.ReadLine());
+			double ümber = kõr.Ümber();
 			kõr.Info();
 
 			Console.ReadLine();
